@@ -47,17 +47,17 @@ let family = {
 // console.clear()
 
 /*
-	What changed
+	It will clear the console
 */
 
 // console.log(family);
 
 /*
-	State the output observed
+	We can see the object family in the console
 */
 
 // console.dir(family, { depth: null });
 
 /*
-	Note your observations on what has changed.
+	We can see the object family in the console with more details that is the possessions of each individual are also shown.
 */
