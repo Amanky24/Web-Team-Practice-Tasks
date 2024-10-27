@@ -47,7 +47,7 @@ let family = {
 // console.clear()
 
 /*
-	What changed 
+	What changed
 */
 
 // console.log(family);
