@@ -11,3 +11,26 @@ Task:
 */
 
 // Write your code over here. Make sure to comment before each part.
+// 1. 
+for(let i=1;i<=10;i++){
+    console.log(i**2);
+}
+
+// 2.
+let i=1,fact=1;
+while(fact<2023){
+    fact*=i;
+    if(fact<2023){
+        console.log(i,"-",fact);
+    }
+    i++;
+}
+
+// 3.
+let v=0;
+do{
+    console.log(v);
+    v-=1;
+}while(v>0); 
+
+	
