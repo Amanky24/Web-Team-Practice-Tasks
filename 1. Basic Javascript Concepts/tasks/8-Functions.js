@@ -15,3 +15,39 @@ that you use the arrow function notation generally.
 */
 
 // Write your code over here. Make sure to comment before each part.
+
+//1. 
+s="deez nuts";
+function titleCase(s){
+    let s1=s.slice(0,1).toUpperCase()+s.slice(1).toLowerCase();
+    return s1;
+}
+console.log(titleCase(s));
+
+
+// 2.
+let n=10;
+factorial(n,1);
+function factorial(n,fact){
+    if(n==0){
+        console.log(fact);
+        return;
+    }
+    fact=fact*n;
+    factorial(n-1,fact);
+}
+
+//3.
+// using function()
+function logger(arg){
+	for(let i=0;i<arg.length;i++){
+		console.log(arg[i]);
+	}
+}
+
+// using => notation
+let logger=(arg)=>{
+	for(let i=0;i<arg.length;i++){
+		console.log(arg[i]);
+	}
+}
