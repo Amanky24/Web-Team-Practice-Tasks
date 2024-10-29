@@ -36,3 +36,34 @@ const words = [
 const joke = 'I spent hours looking far and wide for something which was right under my nose.';
 
 // Write your code over here. Make sure to comment before each part.
+
+// 1.
+
+console.log(message.includes("Hello"))
+console.log(message.includes("aa"))
+console.log(message.includes("Goo"))
+
+// 2.
+for(let i=0;i<words.length;i++){
+    //console.log(words[i].substring(0,2).toLowerCase());
+    if((words[i].substring(0,2).toLowerCase())=="re"){
+        if((words[i].substring((words[i].length-3)).toLowerCase())=="ent"){
+        console.log(words[i]);
+        }
+    }
+}
+
+//3. 
+let str="aaa";
+console.log(str.indexOf('a'));
+
+let jokes=joke.toLowerCase();
+for(let i=97;i<=122;i++){
+    let char=String.fromCharCode(i);
+    let n=jokes.indexOf(char);
+    if(n!=-1){
+        console.log(char," : ",n);
+    }
+}
+
+
