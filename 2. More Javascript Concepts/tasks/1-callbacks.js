@@ -13,3 +13,29 @@ Task:
 
 // Write your code over here. Make sure to comment before each part.
 
+//1...
+
+function callbackExecute(message,callback){
+    console.log(message);
+    setTimeout(()=>{
+        callback();
+    },2000);
+}
+
+//2.
+
+
+function timer(time,tick){
+    let count=0;
+    const interval=setInterval(()=>{
+        count++;
+        console.log("count: "+count);
+
+        if(count>=(time/tick)){
+            clearInterval(interval)
+        }
+    },tick*1000);
+   
+    
+}
+timer(10,2);
