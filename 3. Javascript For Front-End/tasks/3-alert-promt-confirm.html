@@ -67,5 +67,33 @@
             <div id="info" style="display: none;">Hello Goos, Welcome to the club</div>
         </div>
 	</div>
+	<script>
+
+		 //1...
+        function hello(){
+            alert("Hello from mask");
+        }
+
+
+        //2...
+        const div=document.getElementById("favourite");
+        function choose(ele){
+            let  choice=ele.innerHTML;
+            let res=confirm(`So you like ${choice}..... hmmmmmmmm`);
+            if(res===true){
+                div.innerText=`So you like ${choice}.....hmmmmmmmmmm`;
+            }
+        }
+
+        //3....
+
+        const divison=document.getElementById("info")
+        function submitName(){
+            let name=prompt("Enter your name","here");
+            if(name!=null){
+                division.innerHTML=`Hello ${name}, Welcome to the club`;
+            }
+        }
+	</script>
 </body>
 </html>
