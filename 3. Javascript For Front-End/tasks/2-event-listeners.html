@@ -100,5 +100,46 @@
 			<button id="export"> Export List </button>
 		</div>
 	</div>
+	<script>
+		// a ,b part:---
+        function addTask(){
+            const text=document.getElementById("task-input");
+            if(text.value !==""){
+                const newTask=document.createElement("div");
+                newTask.classList.add("to-do-item");
+                newdiv.innerHTML=`<span class="task-text">${text.value}</span>
+					<div class="buttons">
+						<button class="check-item-button"> Check  </button>
+						<button class="delet-item-button"> Delete </button>
+					</div>`
+                const toDoList=document.getElementById("to-do-list");
+                toDoList.appendChild(newTask);
+                text.value="";
+            }
+        }
+        const text=document.querySelector("#task-input");
+        text.addEventListener("keyup",(event)=>{
+            if(event.key ==="Enter"){
+                addTask();
+            }
+        });
+        const btn=document.getElementById("add-task");
+        btn.addEventListener("click",()=>{
+           addTask();
+        });
+
+        // d part:---
+
+        function delete_item(){
+            const toDoList=document.getElementById("to-do-list");
+            toDoList.addEventListener("click",(event)=>{
+                if(event.target.classList.contains("delete-item-button")){
+                    event.parentElement.parentElement.remove();
+
+                }
+            });
+        }
+        delete_item();
+	</script>
 </body>
 </html>
