@@ -75,6 +75,35 @@
 			<button id="change-color" onclick="changeColor()"> Change Color </button>
 		</div>
 	</div>
+	<script>
+		 //1.  
+        let btns=document.querySelectorAll(".button-off");
+        function switchOnOff(){
+            for(let i=0;i<btns.length;i++){
+                if(btns[i].innerText==="off"){
+                    btns[i].innerText="on";
+                    btns[i].setAttribute("class","button-on");
+                }
+                else{
+                    btns[i].innerText="off";
+                    btns[i].setAttribute("class","button-off");
+
+                }
+
+            }   
+        }
+
+        //2. 
+        let div=document.getElementById("tile");
+        let i=0;
+        function changeColor(){
+            div.style.backgroundColor=colorList[i];
+            i++;
+            if(i==7){
+                i=0;
+            }
+        }
+	</script>
 </body>
 </html>
 
