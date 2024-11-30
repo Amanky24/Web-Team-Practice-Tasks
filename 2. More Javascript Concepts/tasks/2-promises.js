@@ -34,3 +34,66 @@ const timedPromise = n => new Promise(r => setTimeout(() => {
 }), n * 1_000);
 
 // Write your code over here. Make sure to comment before each part.
+
+// 1...
+
+function comapreStrings(string1,string2){
+    return new Promise((resolve,regret)=>{
+        let arr=[string1,string2];
+        arr.sort();
+        if(arr[0]===string1){
+            resolve(-1)
+        }
+        else if(string1===string2){
+            resolve(0);
+        }
+        else if(arr[0]===string2){
+            resolve(1);
+        }
+        else{
+            regret("not strings");
+        }
+    })
+}
+comapreStrings("Aman","Virat")
+
+// 2...
+
+function randomPromise(){
+     new Promise((resolve,regret)=>{
+        if(Math.random()>0.5){
+            if(Math.random>0.75){
+                return resolve("heads")
+            }
+            else{
+                return resolve("tails");
+            }
+        }
+        else{
+            return regret("It was found lacking");
+        }
+    })
+}
+randomPromise()
+    .then((res)=>{
+        console.log(res);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+
+//3...
+const timedPromise=(n)=> new Promise((resolve,regret)=>{
+    setTimeout(()=>{
+        resolve(n);
+    },n*1000)
+})
+
+for(let i=1;i<=5;i++){
+    timedPromise(i);
+}
+
+timedPromise(5).then(()=>{
+    console.log("done");
+})
