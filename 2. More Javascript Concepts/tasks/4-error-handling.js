@@ -14,3 +14,19 @@ Task:
 */
 
 // Do not edit the code until mentioned
+
+//1...
+function squareRootCalculator(n){
+    if(isNaN(n)){
+        throw Error("Please enter a number");
+    }
+    else if(n<0){
+        throw Error("Enter a positive value");
+    }
+    else{
+        console.log(Math.sqrt(n));
+    }
+}
+let num=prompt("Enter a number");
+squareRootCalculator(num);
+
