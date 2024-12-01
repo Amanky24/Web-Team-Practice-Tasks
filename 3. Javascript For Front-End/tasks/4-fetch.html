@@ -53,5 +53,29 @@
            <h2 id="info">You got a Tails</h2>
         </div>
 	</div>
+	<script>
+		async function toss(){
+            const h2=document.getElementById("info");
+            try{
+                const data= await fetch("http://localhost:6969/toss");
+                if(data.ok){
+                    const result=await data.text();
+                    
+                    h2.innerText=`You got a ${result}`;
+                }
+                else{
+                    throw new error("Toss didnot happen");
+                }
+            }
+            catch(error){
+                h2.innerText=error.message;
+
+            }
+        }
+        const btn=document.getElementById("toss");
+        btn.addEventListener("click",()=>{
+            toss();
+        });
+	</script>
 </body>
 </html>
