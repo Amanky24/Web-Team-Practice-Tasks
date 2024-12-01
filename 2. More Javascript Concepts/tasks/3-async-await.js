@@ -40,3 +40,31 @@ const responseHandler = payload => {
 };
 
 // Write your code over here. Make sure to comment before each part.
+
+//1...
+function coinFlipPromise(){
+	return new Promise((resolve,regret)=>{
+		const time=2.6+(Math.random()*2.4);
+		setTimeout(()=>{
+			if(Math.random()<0.5){
+				let res="heads";
+				resolve(res);
+			}
+			else{
+				let res="tails";
+				resolve(res);
+			}
+		},time*1000)
+	})
+}
+async function coinFlips(n) {
+	for(let i=1;i<=n;i++){
+		let result= await coinFlipPromise();
+		console.log(result);
+	}
+	
+}
+coinFlips(2);
+
+//2....
+
